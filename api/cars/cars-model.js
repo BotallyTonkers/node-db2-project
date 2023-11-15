@@ -4,8 +4,8 @@ const getAll = () => {
   return db('cars')
 }
 
-const getById = () => {
-
+const getById = (id) => {
+  return db('cars').where('id', id)
 }
 
 const create = () => {
@@ -13,6 +13,7 @@ const create = () => {
 }
 
 module.exports = {
-
-  
+  getAll,
+  getById,
+  create,
 }
